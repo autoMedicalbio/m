@@ -18,13 +18,11 @@
 
         $(function(){
             var nav = [
-                {n1:"标题1",n2:"标题2"}
-
             ];
 
-            $(".nav1-p").append('<span class="glyphicon glyphicon-triangle-bottom nav1-span"></span>')
-            $(".nav2-p").append('<span class="glyphicon glyphicon-triangle-bottom nav2-span"></span>')
-            $(".nav3-p").append('<span class="glyphicon glyphicon-triangle-bottom nav3-span"></span>')
+            $(".nav1-p").append('<span class="checkbox nav1-check-box"><label><input type="checkbox" class="nav1-check"></label></span><span class="glyphicon glyphicon-triangle-bottom nav1-span"></span>')
+            $(".nav2-p").append('<span class="checkbox nav2-check-box"><label><input type="checkbox" class="nav2-check"></label></span><span class="glyphicon glyphicon-triangle-bottom nav2-span"></span>')
+            $(".nav3-p").append('<span class="checkbox nav3-check-box"><label><input type="checkbox" class="nav3-check"></label></span><span class="glyphicon glyphicon-triangle-bottom nav3-span"></span>')
 
             $(".nav1-p").click(function(e){
                 var e = $(e.currentTarget);
@@ -32,24 +30,35 @@
                     e.removeClass("nav-open").addClass("nav-close");
                     e.siblings(".nav2").fadeOut();
                     e.children(".nav1-span").removeClass("glyphicon-triangle-top").addClass("glyphicon-triangle-bottom")
+                    e.siblings(".nav2").find(".nav2-check").attr("checked","")
+                    e.find(".nav1-check").attr("checked","")
+
                 }else{
                     e.removeClass("nav-close").addClass("nav-open");
                     e.siblings(".nav2").fadeIn();
                     e.children(".nav1-span").removeClass("glyphicon-triangle-bottom").addClass("glyphicon-triangle-top")
+                    e.siblings(".nav2").find(".nav2-check").attr("checked","checked")
+                    e.find(".nav1-check").attr("checked","checked")
                 }
             })
             $(".nav2-p").click(function(e){
 
                 var e = $(e.currentTarget);
                 if(e.hasClass("nav-open")){
+
                     e.removeClass("nav-open").addClass("nav-close");
                     e.siblings(".nav3").fadeOut();
                     e.children(".nav2-span").removeClass("glyphicon-triangle-top").addClass("glyphicon-triangle-bottom")
+                    e.siblings(".nav3").find(".nav3-check").attr("checked","")
+                    e.children(".nav2-check").attr("checked","")
                 }else{
                     e.removeClass("nav-close").addClass("nav-open");
                     e.siblings(".nav3").fadeIn();
                     e.children(".nav2-span").removeClass("glyphicon-triangle-bottom").addClass("glyphicon-triangle-top")
+                    e.siblings(".nav3").find(".nav3-check").attr("checked","checked");
+                    e.children(".nav2-check").attr("checked","checked")
                 }
+
 
             })
             $(".nav3-p").click(function(e){
@@ -58,10 +67,12 @@
                     e.removeClass("nav-open").addClass("nav-close");
                     e.siblings(".nav4").fadeOut();
                     e.children(".nav3-span").removeClass("glyphicon-triangle-top").addClass("glyphicon-triangle-bottom")
+                    e.siblings(".nav4").find(".nav4-check").attr("checked","")
                 }else{
                     e.removeClass("nav-close").addClass("nav-open");
                     e.siblings(".nav4").fadeIn();
                     e.children(".nav3-span").removeClass("glyphicon-triangle-bottom").addClass("glyphicon-triangle-top")
+                    e.siblings(".nav4").find(".nav4-check").attr("checked","checked")
                 }
 
             })
@@ -89,7 +100,7 @@
             background: #696969;
             height: 30px;
             line-height: 30px;
-            text-indent: 15px;
+            text-indent: 30px;
             color: #fff;
             margin-top: -10px;
             border-bottom: 1px solid #fff;
@@ -116,7 +127,7 @@
             background: #cfcfcf;
             height: 30px;
             line-height: 30px;
-            text-indent:20px;
+            text-indent:42px;
             margin-top: -10px;
             border-top: 1px solid #FFF8DC;
         }
@@ -124,7 +135,7 @@
             background: #778899;
             height: 30px;
             line-height: 30px;
-            text-indent:25px;
+            text-indent:55px;
             margin-top: -10px;
             border-top: 1px solid #BEBEBE;
 
@@ -133,9 +144,38 @@
             background: #8FBC8F;
             height: 30px;
             line-height: 30px;
-            text-indent:30px;
+            text-indent:60px;
             margin-top: -10px;
             border-top: 1px solid #FAEBD7
+        }
+
+        .nav1-check-box{
+            width: 10px;
+            height: 10px;
+            float: left;
+            margin: 5px 1px 3px -48px;
+        }
+        .nav1-check{
+
+        }
+        .nav2-check-box{
+            width: 10px;
+            height: 10px;
+            float: left;
+            margin: 5px 1px 3px -60px;
+
+        }
+        .nav2-check{
+
+        }
+        .nav3-check-box{
+            width: 10px;
+            height: 10px;
+            float: left;
+            margin: 5px 1px 3px -74px;
+        }
+        .nav3-check{
+
         }
     </style>
 
