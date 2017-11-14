@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head>>
     <meta charset="UTF-8">
     <title>良药宝典价目表</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -89,13 +89,21 @@
             background: url("img/1.jpg") repeat;
             font-size: 15px;
         }
-        .ss{
-            margin-left: 5%;
+        /*.ss{
+            margin-left: 8%;
             font-size: 9px;
             color:#521743;
         }
+        */
+        .top{
+            float-left;
+            width:100%;
+            height:10%;
+            border-top: 1px solid #fff;
+            background-color:#04B3D5;
+        }
         .container{
-            margin-top: 30px;
+            margin-top: 20px;
         }
         .nav1{
 
@@ -109,12 +117,11 @@
             background: #696969;
             text-shadow: 5px 5px 5px #272924;
             font-size: 15px;
-            height: 10%;
+            height: 9%;
             line-height: 35px;
             text-indent:30px;
             color: #fff;
             margin-top: -10px;
-            border-bottom: 1px solid #fff;
             background-image: linear-gradient(to top, #fff,#48577F);
         }
         .nav1-span{
@@ -193,20 +200,47 @@
 
         }
         b{
+            display: inline-block;
             color:#9E0E0E;
             font-size: 20px;
             margin-left: 12%;
+            position:relative;
+            left:-30px;
         }
         b>d{
             font-size: 13px;
         }
+        .bottom{
+            color:#C61138;
+        }
+        .n{
+            width:100%;
+            height:30px;
+            background-color:#74B223;
+            line-height: 35px;
+            text-indent:30px;
+            color: #fff;
+        }
+        .n2{
+            width:100%;
+            height:30px;
+            background-color:#0CB3D9;
+            line-height: 35px;
+            text-indent:30px;
+            color: #fff;
+        }
+
+
     </style>
 
 </head>
 <body>
     <div class="container">
+        <div class="">
+            <p class="n">基因检测服务</p>
+        </div>
         <div class="nav1">
-            <p class="nav1-p">药物代谢酶基础检测(6)<b><d>￥</d>4900</b><br><span class="ss">赠送药代酶无代谢能力药物筛查</span></p>
+            <p class="nav1-p">药物代谢酶基础检测(6)<b><d>￥</d>4900</b><br><span class="ss"></span></p>
             <div class="nav2" >
                 <p class="nav2-p" >CYP450 2C9</p>
                 <div class="nav3" >
@@ -244,8 +278,11 @@
                 </div>
             </div>
         </div>
+        <div class="">
+            <p class="n2">个体化用药分析服务</p>
+        </div>
         <div class="nav1">
-            <p class="nav1-p">婴童常用药(13)<b>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<d>￥</d>1800</b><br><span class="ss">该价格为已做过药代酶检测后的个体化用药分析价格</span></p>
+            <p class="nav1-p">婴童常用药(13)<b>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<d>￥</d>1800</b></p>
             <div class="nav2" >
                 <p class="nav2-p" >代谢及内分泌系统药物(5)</p>
                 <div class="nav3" >
@@ -905,7 +942,7 @@
             </div>
         </div>
         <div class="nav1">
-            <p class="nav1-p">全部药品(23)<b>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<d>￥</d>8900</b><br><sapn class="ss">该价格为已做过药代酶检测后的个体化用药分析价格</sapn></p>
+            <p class="nav1-p">全部药品(23)<b>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<d>￥</d>8900</b></p>
             <div class="nav2">
                 <p class="nav2-p" >代谢及内分泌系统药物(41)</p>
                 <div class="nav3">
@@ -4889,6 +4926,10 @@
             </div>
         </p>
     </div>
-
+        <h3 class="bottom">
+            <marquee direction=up><div align="center">注：未做过基因检测服务的用户，需先选择基因检测服务，后选择个体化用药分析服务。已做过基因检测服务的用户，可直接选择个体化用药分析服务。</div></marquee>
+            </marquee>
+        </h3>
+    </div>
 </body>
 </html>
